@@ -1,0 +1,23 @@
+// cgpa calculator 
+#include <stdio.h>
+int main(){
+    int subjects;
+    float totalcredits = 0,totalgradepoints = 0;
+    printf("enter the number of subjects: ");
+    scanf("%d",&subjects);
+    for (int i = 1;i<=subjects;i++){
+float obtainedmarks,maxmarks,credit,gradepoint;
+printf("enter the obtained marks for subject %d : ",i);
+scanf ("%f", &obtainedmarks);
+printf("enter the maximum marks for subject %d :",i);
+scanf("%f",&maxmarks);
+printf("enter credit hours fot subject %d : ",i);
+scanf("%f",&credit);
+gradepoint = (obtainedmarks/maxmarks)*10;
+totalgradepoints +=gradepoint*credit;
+totalcredits += credit;
+    }
+    float CGPA = totalgradepoints/totalcredits;
+    printf("your CGPA is : %.2f\n",CGPA);
+    return 0;
+}
